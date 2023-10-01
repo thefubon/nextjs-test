@@ -1,12 +1,9 @@
-type Props = {};
-
-export default async function Team(props: Props) {
-  const data = await fetch("http://localhost:3000/api/team", {
-    cache: "no-store",
-  });
+export default async function Team() {
+  await new Promise((resolve) => setTimeout(resolve, 2000));
+  const value = Math.random();
   return (
     <section className="w-full h-[200px] bg-indigo-500 text-white flex justify-center items-center rounded-lg">
-      Team
+      Team {value}
     </section>
   );
 }
